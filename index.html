@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bismon AquaPure Solutions | Water Production & Distribution</title>
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <h1>💧 Bismon AquaPure Solutions</h1>
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('home')">Home</button>
+                <button class="tab" onclick="showTab('production')">Production</button>
+                <button class="tab" onclick="showTab('distribution')">Distribution</button>
+                <button class="tab" onclick="showTab('about')">About</button>
+            </div>
+        </div>
+        <div class="mobile-nav">
+            <select onchange="handleMobileTabChange(this.value)">
+                <option value="home">Home</option>
+                <option value="production">Production</option>
+                <option value="distribution">Distribution</option>
+                <option value="about">About</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Home Section -->
+        <section id="home" class="section active animate-fadeIn">
+            <div class="card">
+                <h2 class="text-2xl font-bold mb-4">Welcome to AquaPure Solutions</h2>
+                <p class="mb-4">
+                    Delivering pure, clean water to homes and businesses across the region since 2010.
+                    Our state-of-the-art production facility and efficient distribution network ensure
+                    you receive fresh water when you need it.
+                </p>
+                <div class="grid">
+                    <div class="stat-card">
+                        <h3 class="font-bold">Production Capacity</h3>
+                        <p class="text-3xl">85%</p>
+                        <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="font-bold">Inventory Level</h3>
+                        <p class="text-3xl">62%</p>
+                        <div class="progress-bar"><div class="progress" style="width: 62%"></div></div>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="font-bold">Active Orders</h3>
+                        <p class="text-3xl">12</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Production Dashboard -->
+        <section id="production" class="section">
+            <div class="card">
+                <h2 class="text-2xl font-bold mb-6">Production Dashboard</h2>
+                
+                <div class="grid">
+                    <!-- Production Metrics -->
+                    <div class="stat-card">
+                        <h3 class="font-bold mb-2">Daily Production</h3>
+                        <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                        <p>85% of capacity</p>
+                    </div>
+
+                    <!-- Inventory Levels -->
+                    <div class="stat-card">
+                        <h3 class="font-bold mb-2">Inventory Levels</h3>
+                        <div class="progress-bar"><div class="progress" style="width: 62%"></div></div>
+                        <p>62% stock available</p>
+                    </div>
+
+                    <!-- Machine Status -->
+                    <div class="stat-card">
+                        <h3 class="font-bold mb-2">Machine Status</h3>
+                        <div class="status operational">OPERATIONAL</div>
+                    </div>
+
+                    <!-- Water Quality -->
+                    <div class="stat-card">
+                        <h3 class="font-bold mb-2">Water Quality</h3>
+                        <div class="status operational">EXCELLENT</div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <button class="btn">Start New Batch</button>
+                    <button class="btn green">Check Inventory</button>
+                    <button class="btn purple">Run Maintenance</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Distribution Dashboard -->
+        <section id="distribution" class="section">
+            <div class="card">
+                <h2 class="text-2xl font-bold mb-6">Distribution Dashboard</h2>
+                
+                <div class="grid">
+                    <!-- Active Deliveries -->
+                    <div class="stat-card">
+                        <h3 class="font-bold mb-4">Active Deliveries (7)</h3>
+                        <div class="route-card">
+                            <div class="flex justify-between">
+                                <span class="font-medium">John D.</span>
+                                <span class="text-sm text-green-600">Completed</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" style="width: 100%"></div></div>
+                            <div class="text-xs text-gray-600">Route 1</div>
+                        </div>
+                        <div class="route-card">
+                            <div class="flex justify-between">
+                                <span class="font-medium">Sarah M.</span>
+                                <span class="text-sm text-blue-600">En Route</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+                            <div class="text-xs text-gray-600">Route 2</div>
+                        </div>
+                        <div class="route-card">
+                            <div class="flex justify-between">
+                                <span class="font-medium">Mike R.</span>
+                                <span class="text-sm text-yellow-600">Loading</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" style="width: 20%"></div></div>
+                            <div class="text-xs text-gray-600">Route 3</div>
+                        </div>
+                    </div>
+
+                    <!-- Inventory Levels -->
+                    <div class="stat-card">
+                        <h3 class="font-bold mb-4">Current Inventory</h3>
+                        <div class="route-card">
+                            <div class="flex justify-between">
+                                <span class="font-medium">20L Bottles</span>
+                                <span class="text-blue-600 font-bold">1500</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" style="width: 50%"></div></div>
+                        </div>
+                        <div class="route-card">
+                            <div class="flex justify-between">
+                                <span class="font-medium">5L Bottles</span>
+                                <span class="text-blue-600 font-bold">2800</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" style="width: 93%"></div></div>
+                        </div>
+                        <div class="route-card">
+                            <div class="flex justify-between">
+                                <span class="font-medium">Coolers</span>
+                                <span class="text-blue-600 font-bold">450</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map Placeholder -->
+                <div class="map-placeholder">
+                    Interactive Map Integration Coming Soon
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="card">
+                <h2 class="text-2xl font-bold mb-4">About AquaPure Solutions</h2>
+                <p class="mb-4">
+                    Bismon AquaPure Solutions is a leading provider of premium drinking water with a proven commitment to quality and sustainability.
+                    Our advanced purification systems and efficient distribution network ensure clean, fresh water reaches our customers every day.
+                </p>
+                
+                <div class="grid gap-4 mb-6">
+                    <div class="stat-card">
+                        <h3 class="font-bold mb-2">Mission</h3>
+                        <p>To provide safe, clean drinking water to communities while maintaining environmental sustainability.</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="font-bold mb-2">Vision</h3>
+                        <p>To be the leading water solutions provider in the region through innovation and excellence.</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="font-bold mb-2">Values</h3>
+                        <ul class="list-disc pl-5">
+                            <li>Quality</li>
+                            <li>Integrity</li>
+                            <li>Sustainability</li>
+                            <li>Community</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="font-bold mb-2">Contact Us</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p>Head Office: 15 Water Street, Bismon Estate</p>
+                        <p>Phone: (+234) 802-2338-3704</p>
+                        <p>Email: info@bismonaquapure.com</p>
+                    </div>
+                    <div class="stat-card">
+                        <p class="text-sm">Business Hours: Monday - Friday, 8:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bismon AquaPure Solutions. All rights reserved.</p>
+            <p class="text-sm mt-2">ISO 9001 Certified Company</p>
+        </div>
+    </footer>
+,</body>
+</html>
+ 
